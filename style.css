@@ -1,58 +1,138 @@
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  padding: 0;
   font-family: "Pretendard", sans-serif;
   color: #f5f7ff;
 }
 
-body.winter {
-  background: linear-gradient(180deg, #0d1b2a 0%, #1b263b 50%, #415a77 100%);
-  background-attachment: fixed;
+/* 메인 배경 */
+body.home {
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 20% 10%, rgba(220,235,255,0.18), transparent 55%),
+              radial-gradient(900px 500px at 80% 20%, rgba(200,220,255,0.14), transparent 60%),
+              linear-gradient(180deg, #0d1b2a 0%, #1b263b 55%, #2b3b55 100%);
 }
 
-.page-title {
+/* 서브페이지 배경 */
+body.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0d1b2a 0%, #1b263b 55%, #2b3b55 100%);
+}
+
+.hero {
+  width: min(920px, 90%);
+  margin: 0 auto;
+  padding: 56px 0 22px;
   text-align: center;
-  margin-top: 50px;
-  font-size: 34px;
+}
+.hero-sub { margin: 0 0 10px; opacity: 0.85; letter-spacing: 1px; }
+.hero-title { margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 800; }
+.hero-desc { margin: 14px 0 0; opacity: 0.8; }
+
+/* 메인 4구역 */
+.grid {
+  width: min(920px, 90%);
+  margin: 28px auto 44px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.scene-card {
+  text-decoration: none;
+  color: inherit;
+  padding: 22px 22px 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(220,235,255,0.18);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.25);
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+}
+.scene-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.12);
+}
+.scene-top { display: flex; align-items: center; gap: 10px; }
+.scene-emoji { font-size: 22px; }
+.scene-title { margin: 0; font-size: 20px; font-weight: 800; }
+.scene-desc { margin: 12px 0 18px; opacity: 0.85; line-height: 1.4; }
+.scene-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(220,235,255,0.35);
+  background: rgba(200,220,255,0.16);
   font-weight: 700;
 }
+.scene-card.snow { box-shadow: 0 10px 32px rgba(180, 200, 255, 0.18); }
+.scene-card.walk { box-shadow: 0 10px 32px rgba(170, 255, 220, 0.12); }
+.scene-card.breakup { box-shadow: 0 10px 32px rgba(255, 190, 210, 0.10); }
+.scene-card.summer { box-shadow: 0 10px 32px rgba(255, 230, 160, 0.10); }
 
+/* 서브페이지 제목 */
+.page-title {
+  width: min(920px, 90%);
+  margin: 40px auto 0;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* 노래 카드 리스트 */
 .song-list {
-  width: 80%;
-  max-width: 900px;
-  margin: 50px auto;
+  width: min(920px, 90%);
+  margin: 28px auto 22px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 22px;
 }
 
 .song-item {
-  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 30px rgba(180, 200, 255, 0.25);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(220,235,255,0.16);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.22);
 }
 
-.info h2 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
+.album {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex: 0 0 auto;
 }
 
-.info p {
-  margin: 6px 0 14px;
-  font-size: 16px;
-  opacity: 0.85;
-}
+.info h2 { margin: 0; font-size: 22px; font-weight: 800; }
+.info p { margin: 8px 0 12px; opacity: 0.85; }
 
 .go-btn {
   display: inline-block;
-  padding: 9px 18px;
-  background: rgba(200, 220, 255, 0.25);
+  padding: 9px 16px;
   border-radius: 12px;
-  color: #ffffff;
-  font-weight: 600;
+  border: 1px solid rgba(220,235,255,0.35);
+  background: rgba(200,220,255,0.18);
+  color: #fff;
+  font-weight: 700;
   text-decoration: none;
-  border: 1px solid rgba(220, 235, 255, 0.4);
+}
+
+.nav {
+  width: min(920px, 90%);
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.nav a { color: #cfe6ff; text-decoration: none; font-weight: 800; }
+
+.footer { text-align: center; padding: 24px 0 34px; opacity: 0.7; font-size: 14px; }
+
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; }
+  .song-item { flex-direction: column; text-align: center; }
 }
