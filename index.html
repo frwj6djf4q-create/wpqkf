@@ -3,50 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>눈 올 때 듣기 좋은 노래</title>
+  <title>상황별 힐링송</title>
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    as="style"
-    crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-  />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 </head>
+<body class="home">
 
-<body class="winter">
+  <header class="hero">
+    <p class="hero-sub">4명이서 만드는</p>
+    <h1 class="hero-title">상황별 듣기 좋은 노래</h1>
+    <p class="hero-desc">원하는 상황을 눌러서 플레이리스트로 들어가!</p>
+  </header>
 
-  <h1 class="page-title">❄️ 눈 올 때 듣기 좋은 노래 ❄️</h1>
-
-  <div class="song-list">
-
-    <div class="song-item">
-      <div class="info">
-        <h2>하얀 그리움</h2>
-        <p>프로미스나인 (fromis_9)</p>
-        <a class="go-btn" target="_blank"
-           href="https://www.youtube.com/watch?v=5ZB9JLfIw_Q">🎧 노래 들으러 가기</a>
+  <main class="grid">
+    <a class="scene-card snow" href="snow.html">
+      <div class="scene-top">
+        <span class="scene-emoji">❄️</span>
+        <h2 class="scene-title">눈 올 때</h2>
       </div>
-    </div>
+      <p class="scene-desc">차분하고 포근한 겨울 감성</p>
+      <span class="scene-btn">들어가기 →</span>
+    </a>
 
-    <div class="song-item">
-      <div class="info">
-        <h2>듣는 편지</h2>
-        <p>40</p>
-        <a class="go-btn" target="_blank"
-           href="https://www.youtube.com/watch?v=a5oeNwoCi-s">🎧 노래 들으러 가기</a>
+    <a class="scene-card walk" href="walk.html">
+      <div class="scene-top">
+        <span class="scene-emoji">🚶‍♀️</span>
+        <h2 class="scene-title">산책할 때</h2>
       </div>
-    </div>
+      <p class="scene-desc">가볍게 걷기 좋은 분위기</p>
+      <span class="scene-btn">들어가기 →</span>
+    </a>
 
-    <div class="song-item">
-      <div class="info">
-        <h2>회전목마</h2>
-        <p>소코도모 (쇼미 무대)</p>
-        <a class="go-btn" target="_blank"
-           href="https://www.youtube.com/watch?v=0xR5Y9K0Z6Q">🎤 쇼미 무대 보러 가기</a>
+    <a class="scene-card breakup" href="breakup.html">
+      <div class="scene-top">
+        <span class="scene-emoji">🌧️</span>
+        <h2 class="scene-title">이별할 때</h2>
       </div>
-    </div>
+      <p class="scene-desc">감정 정리할 때 듣는 노래</p>
+      <span class="scene-btn">들어가기 →</span>
+    </a>
 
-  </div>
+    <a class="scene-card summer" href="summer.html">
+      <div class="scene-top">
+        <span class="scene-emoji">🌴</span>
+        <h2 class="scene-title">더울 때</h2>
+      </div>
+      <p class="scene-desc">시원한 비트로 리셋</p>
+      <span class="scene-btn">들어가기 →</span>
+    </a>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Healing Songs Team</p>
+  </footer>
 
 </body>
 </html>
